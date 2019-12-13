@@ -43,7 +43,7 @@ def find_javahome():
             path = result.strip()
             for place_to_look in (
                 os.path.join(os.path.dirname(path), "Libraries"), 
-                os.path.join(path, "jre", "lib", "server")):
+                os.path.join(path, "lib", "server")):
                 lib = os.path.join(place_to_look, "libjvm.dylib")
                 #
                 # dlopen_preflight checks to make sure libjvm.dylib
